@@ -26,13 +26,13 @@ const words = text.split(' '); // Split the text into an array of words
 console.log(words); // Log the array of words
 console.log(text); // Log the original text
 
-const upperCase = for (let i = 0; i < text.length; i++) {
-  const wordArr = words[i]; 
-  console.log(wordArr); 
+for (let i = 0; i < words.length; i++) {
+  const word = words[i];
+  console.log(word);
 
-  const text = "los angeles";
- const words = text.split(" "); 
-console.log(words); // ["los", "angeles"] 
+  const upperCaseWord = word.charAt(0).toUpperCase() + word.substring(1);
+  console.log(upperCaseWord);
+}// ["los", "angeles"] 
 // const uppercaseWords = [ ]; 
 // for (let i = 0; i < words.length; i++) { // const word = words[i]; 
 // const ucWord = word.charAt(0).toUpperCase() + word.substring(1); 
@@ -40,5 +40,4 @@ console.log(words); // ["los", "angeles"]
 // map - return // forEach - returns nothing 
 // filter - reduce or filter the array elements const uppercaseWords = words.map((word) => { const ucWord = word.charAt(0).toUpperCase() + w
 
-}
 

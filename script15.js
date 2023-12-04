@@ -21,42 +21,39 @@ console.log(0.3 == currencyOperation(0.1, 0.2, '+')) // true
 
 
  */
-let twentyCents = 0.20
-let tenCents = 0.10
-console.log(`${twentyCents} + ${tenCents} = ${twentyCents + tenCents}`)// answer= "0.2 + 0.1 = 0.30000000000000004"
+let twentyCents = 0.2;
+let tenCents = 0.1;
+console.log(`${twentyCents} + ${tenCents} = ${twentyCents + tenCents}`); // answer= "0.2 + 0.1 = 0.30000000000000004"
 
 let fixedTwenty = twentyCents.toFixed(2);
 let fixedTen = tenCents.toFixed(2);
-console.log(fixedTwenty + fixedTen) //This is not working because it is converted totally to a string and the n concatenated while doing addition operation.
+console.log(fixedTwenty + fixedTen); //This is not working because it is converted totally to a string and the n concatenated while doing addition operation.
 
-function currencyAdd(float1, float2){ return(float1+float2).toFixed(2);}
-console.log (currencyAdd(3.098,4.6785));
+function currencyAdd(float1, float2) {
+  return (float1 + float2).toFixed(2);
+}
+console.log(currencyAdd(3.098, 4.6785));
 
-console.log ((6.098,4.6785).toFixed(3));
+console.log((6.098, 4.6785).toFixed(3));
 
 function currencyOperation(float3, float4, operation) {
-    if (operation === "+") {
-      return (float3 + float4).toFixed(2);
-    } else if (operation === "-") {
-      return (float3 - float4).toFixed(2);
-    } else if (operation === "*") {
-      return (float3 * float4).toFixed(2);
-    } else if (operation === "/") {
-      if (float4 !== 0) {
-        return (float3 / float4).toFixed(2);
-      } else {
-        return "division invalid as denominator is zero";
-      }
-    } 
+  if (operation === "+") {
+    return (float3 + float4).toFixed(2);
+  } else if (operation === "-") {
+    return (float3 - float4).toFixed(2);
+  } else if (operation === "*") {
+    return (float3 * float4).toFixed(2);
+  } else if (operation === "/") {
+    if (float4 !== 0) {
+      return (float3 / float4).toFixed(2);
+    } else {
+      return "division invalid as denominator is zero";
+    }
   }
-  
-  console.log(currencyOperation(2.456, 6.139, "+")); 
-  console.log(currencyOperation(22.5, 16.139, "-"));
-  console.log(currencyOperation(22.5, 16.139, "*")); 
-  console.log(currencyOperation(22.5, 16.139, "/")); 
-  console.log(currencyOperation(10, 0, "/")); 
+}
 
-  
-
-
-
+console.log(currencyOperation(2.456, 6.139, "+"));
+console.log(currencyOperation(22.5, 16.139, "-"));
+console.log(currencyOperation(22.5, 16.139, "*"));
+console.log(currencyOperation(22.5, 16.139, "/"));
+console.log(currencyOperation(10, 0, "/"));

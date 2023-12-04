@@ -15,14 +15,17 @@ f)  Print out the full list of names in the combined phone book
 
  */
 
-const phoneBookABC = new Map() //an empty map to begin with
-phoneBookABC.set('Annabelle', '0412312343')
-phoneBookABC.set('Barry', '0433221117')
-phoneBookABC.set('Caroline', '0455221182')
+const phoneBookABC = new Map(); //an empty map to begin with
+phoneBookABC.set("Annabelle", "0412312343");
+phoneBookABC.set("Barry", "0433221117");
+phoneBookABC.set("Caroline", "0455221182");
 
-
-const phoneBook1 = new Map([ ["Annabelle", "98798797"], ["Barry", "65465465"], ]); 
-const phoneBook2 = new Map([["Caroline", "987987456"]]); 
-phoneBook2.forEach((value, key) => { phoneBook1.set(key, value); }); 
+const phoneBook1 = new Map([
+  ["Annabelle", "98798797"],
+  ["Barry", "65465465"],
+]);
+const phoneBook2 = new Map([["Caroline", "987987456"]]);
+phoneBook2.forEach((value, key) => {
+  phoneBook1.set(key, value);
+});
 console.log(phoneBook1);
-

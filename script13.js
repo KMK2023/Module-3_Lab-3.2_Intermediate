@@ -33,7 +33,7 @@ console.log(animals.splice(0,2));
 
 
 
-const animals = ['Tiger', 'Giraffe']
+const animals1 = [...animals]
 console.log(animals)
 
 animals.push('cow','ox');
